@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lancheria"
+            android:textSize="30sp"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lanche:"
+            android:textSize="24sp"
+            android:gravity="left" />
+
+        <!-- Grupo de RadioButtons dos tipos de lanches -->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioXis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xis"
+                android:onClick="mostraLancheClick"/>
+
+            <RadioButton
+                android:id="@+id/radioCachorro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cachorro-Quente"
+                android:onClick="mostraLancheClick" />
+
+        </RadioGroup>
+
+        <!-- Grupo de RadioButtons dos sabores de Xis -->
+        <RadioGroup
+            android:id="@+id/radioGroupXis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sabores de Xis:"
+                android:textSize="20sp"
+                android:gravity="left"
+                />
+            <RadioButton
+                android:id="@+id/radioXisCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Completo (R$20,00)" />
+
+            <RadioButton
+                android:id="@+id/radioXisSalada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salada (R$15,00)" />
+
+            <RadioButton
+                android:id="@+id/radioXisBacon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bacon (R$25,00)" />
+        </RadioGroup>
+
+        <!-- Grupo de RadioButtons dos sabores de Cachorro -->
+        <RadioGroup
+            android:id="@+id/radioGroupCachorro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sabores de Cachorro-quente:"
+                android:textSize="20sp"
+                android:gravity="left" />
+            <RadioButton
+                android:id="@+id/radioCachorroCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Completo (R$15,00)" />
+
+            <RadioButton
+                android:id="@+id/radioCachorroCasa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Da casa (R$18,00)" />
+
+            <RadioButton
+                android:id="@+id/radioCachorroCalabresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calabresa (R$20,00)" />
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Extras:"
+            android:textSize="20sp"
+            android:gravity="left" />
+
+        <CheckBox
+            android:id="@+id/checkBacon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bacon (R$2,00)" />
+
+        <CheckBox
+            android:id="@+id/checkCebola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cebola ($1,50)" />
+
+        <CheckBox
+            android:id="@+id/checkMaionese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maionese (R$1,00)" />
+
+        <CheckBox
+            android:id="@+id/checkOvo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ovo (R$3,00)" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            android:onClick="calcularClick"
+            />
+
+        <TextView
+            android:id="@+id/textResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textColor="#FF0000"
+            android:text="Valor:" />
+
+    </LinearLayout>
+</ScrollView>
+
